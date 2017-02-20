@@ -8613,13 +8613,9 @@ var worldToView = function worldToView(x, y) {
   return [canvas.width / 2 + x * scale, canvas.height / 2 + y * scale];
 };
 
-var viewToWorld = function viewToWorld(x, y) {
-  return [Math.floor(x / scale - canvas.width / 2), Math.floor(y / scale - canvas.height / 2)];
-};
-
 var draw = function draw() {
   // context.clearRect(0, 0, canvas.width, canvas.height)
-  context.fillStyle = 'hsl(' + hue + ', 100%, 40%)';
+  context.fillStyle = 'hsl(' + hue + ', 80%, 40%)';
 
   state.forEach(function (cell) {
     var x = cell.get('x');

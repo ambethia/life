@@ -31,13 +31,9 @@ const worldToView = (x, y) => {
   return [canvas.width / 2 + x * scale, canvas.height / 2 + y * scale]
 }
 
-const viewToWorld = (x, y) => {
-  return [Math.floor(x / scale - canvas.width / 2), Math.floor(y / scale - canvas.height / 2)]
-}
-
 const draw = () => {
   // context.clearRect(0, 0, canvas.width, canvas.height)
-  context.fillStyle = `hsl(${hue}, 8lli0%, 40%)`
+  context.fillStyle = `hsl(${hue}, 80%, 40%)`
 
   state.forEach((cell) => {
     const x = cell.get('x')
