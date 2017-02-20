@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "webpack",
-    "deploy": "yarn build && surge",
+    "deploy": "yarn build && surge --project ./public --domain life.ambethia.surge.sh",
     "start": "webpack-dev-server",
     "test": "jest --watch"
   },

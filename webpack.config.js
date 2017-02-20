@@ -9,7 +9,8 @@ module.exports = {
     path.join(SOURCE_PATH, 'index.js')
   ],
   output: {
-    path: BUILD_PATH
+    path: BUILD_PATH,
+    filename: 'bundle.js'
   },
   module: {
     rules: [
