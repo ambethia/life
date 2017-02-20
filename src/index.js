@@ -2,7 +2,7 @@ import life from './life'
 import { fromJS } from 'immutable'
 
 const SCALE = 256
-const SPEED = 32
+const SPEED = 64
 let scale = 0
 let hue = 0
 
@@ -37,7 +37,7 @@ const viewToWorld = (x, y) => {
 
 const draw = () => {
   // context.clearRect(0, 0, canvas.width, canvas.height)
-  context.fillStyle = `hsl(${hue}, 80%, 40%)`
+  context.fillStyle = `hsl(${hue}, 8lli0%, 40%)`
 
   state.forEach((cell) => {
     const x = cell.get('x')
