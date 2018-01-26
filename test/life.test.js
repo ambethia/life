@@ -1,25 +1,25 @@
 import life from '../src/life'
 import { fromJS } from 'immutable'
 
-const BLOCK = fromJS([
-  { x: 1, y: 1 }, { x: 1, y: 2 },
-  { x: 2, y: 1 }, { x: 2, y: 2 }
-]).toSet()
+const BLOCK = [
+  '1,1', '1,2',
+  '2,1', '2,2'
+]
 
-const BLINKER_H = fromJS([
-  { x: 2, y: 3 }, { x: 3, y: 3 }, { x: 4, y: 3 }
-]).toSet()
+const BLINKER_H = [
+  '2,3', '3,3', '4,3'
+]
 
-const BLINKER_V = fromJS([
-  { x: 3, y: 2 },
-  { x: 3, y: 3 },
-  { x: 3, y: 4 }
-]).toSet()
+const BLINKER_V = [
+  '3,2',
+  '3,3',
+  '3,4'
+]
 
 test('block', () => {
-  expect(life(BLOCK).equals(BLOCK)).toBeTruthy()
+  expect(life(BLOCK)).toEqual(BLOCK)
 })
 
 test('blinker', () => {
-  expect(life(BLINKER_H).equals(BLINKER_V)).toBeTruthy()
+  expect(life(BLINKER_H)).toEqual(BLINKER_V)
 })
